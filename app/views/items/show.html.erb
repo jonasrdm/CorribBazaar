@@ -1,0 +1,52 @@
+<html lang='en'>
+
+	<body>
+
+		<!-- Page Content -->
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<div class="row">
+
+						<p id="notice"><%= notice %></h5>
+
+						<h5>
+						  <strong>Name:</strong>
+						  <%= @item.name %>
+						</h5>
+
+						<h5>
+						  <strong>Sub title:</strong>
+						  <%= @item.sub_title %>
+						</h5>
+
+						<h5>
+						  <strong>Description:</strong>
+						  <%= @item.description %>
+						</h5>
+
+						<h5>
+						  <strong>Image url:</strong>
+						  <%= @item.image_url %>
+						</h5>
+
+						<h5>
+						  <strong>Price:</strong>
+						  <%= @item.price %>
+						</h5>
+
+						<%= link_to "Back", { :controller => :admin, :action => :manage } %>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		
+	</body>
+</html>

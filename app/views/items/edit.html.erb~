@@ -1,0 +1,26 @@
+<html lang='en'>
+
+	<body>
+
+		<!-- Page Content -->
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<div class="row">
+						<legend class="col-sm-12 col-lg-12 col-md-12"> Editing Item </legend>
+
+						<%= render 'form' %>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		
+	</body>
+</html>

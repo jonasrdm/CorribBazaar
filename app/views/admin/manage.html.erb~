@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<div class="container">
+	  <legend class="col-sm-12 col-lg-12 col-md-12"> Manage Items </legend>
+	  <%= link_to "New", { :controller => :items, :action => :new }, 
+			{ style: "margin-left:30px" } %>
+	  <table class="table table-hover">
+		<thead>
+		  <tr>
+		    <th>Name</th>
+		    <th>Sub Title</th>
+		    <th>Image Url</th>
+		    <th>Price</th>
+		    <th></th>
+		    <th></th>
+		  </tr>
+		</thead>
+		<tbody>
+		<% @items.each do |item| %>
+		  <tr>
+        	<td><%= item.name %></td>
+        	<td><%= item.sub_title %></td>
+        	<td><%= item.image_url %></td>
+        	<td><%= item.price %></td>
+        	<td><%= link_to 'Edit', edit_item_path(item) %></td>
+        	<td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  </tr>
+		<% end %>
+		</tbody>
+	  </table>
+	</div>
+</html>

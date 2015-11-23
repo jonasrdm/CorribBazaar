@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<body>
+
+		<!-- Page Content -->
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<div class="row">
+					
+					<legend class="col-sm-12 col-lg-12 col-md-12"> Stuff </legend>
+					
+						<% @items.each do |item| %>
+						
+						<div class="col-sm-4 col-lg-4 col-md-4">
+							<a href="#" class="thumbnail">
+								<%= image_tag(item.image_url, :style => "height:264px") %>
+							</a>
+							<div class="caption">
+								<h4 class="pull-right">€<%= item.price %></h4>
+								<h4><%= item.name %></h4>
+								<p><%= item.sub_title %></p>
+							</div>
+						</div>
+
+						<% end %>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		
+		
+
+	</body>
+
+<!--<h1>Listing items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sub title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.sub_title %></td>
+        <td><%= item.description %></td>
+        <td><%= item.image_url %></td>
+        <td><%= item.price %></td>
+        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %> -->
+</html>
